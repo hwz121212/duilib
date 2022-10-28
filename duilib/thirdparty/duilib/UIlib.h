@@ -27,18 +27,15 @@
 // NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#if defined(UILIB_EXPORTS)
-#if defined(_MSC_VER)
+
+#if defined(UILIB_DLL)
+#if defined(UILIB_DLL_EXPORT)
 #define UILIB_API __declspec(dllexport)
 #else
-#define UILIB_API 
-#endif
-#else
-#if defined(_MSC_VER)
 #define UILIB_API __declspec(dllimport)
-#else
-#define UILIB_API 
 #endif
+#else
+#define UILIB_API
 #endif
 
 #define UILIB_COMDAT __declspec(selectany)

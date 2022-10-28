@@ -1,5 +1,5 @@
 #pragma once
-#include "../DuiLib/UIlib.h"
+#include "DuiLib/UIlib.h"
 #include "UIProperties.h"
 
 //////////////////////////////////////////////////////////////////////////
