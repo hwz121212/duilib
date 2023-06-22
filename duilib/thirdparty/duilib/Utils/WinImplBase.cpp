@@ -61,6 +61,21 @@ CControlUI* WindowImplBase::CreateControl(LPCTSTR pstrClass)
 	return NULL;
 }
 
+CPaintManagerUI* WindowImplBase::GetPaintManager()
+{
+	return &m_PaintManager;
+}
+
+CControlUI* WindowImplBase::FindControl(POINT pt)
+{
+	return m_PaintManager.FindControl(pt);
+}
+
+CControlUI* WindowImplBase::FindControl(LPCTSTR pstrName)
+{
+	return m_PaintManager.FindControl(pstrName);
+}
+
 LRESULT WindowImplBase::MessageHandler(UINT uMsg, WPARAM wParam, LPARAM /*lParam*/, bool& /*bHandled*/)
 {
 	if (uMsg == WM_KEYDOWN)

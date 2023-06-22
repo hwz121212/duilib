@@ -39,6 +39,11 @@ namespace DuiLib
 		static LPBYTE m_lpResourceZIPBuffer;
 
 	public:
+		CPaintManagerUI* GetPaintManager();
+		CControlUI* FindControl(POINT pt);
+		CControlUI* FindControl(LPCTSTR pstrName);
+
+	public:
 		virtual UINT GetClassStyle() const;
 		virtual UILIB_RESOURCETYPE GetResourceType() const;
 		virtual CDuiString GetZIPFileName() const;

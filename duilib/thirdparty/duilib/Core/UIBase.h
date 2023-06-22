@@ -63,8 +63,9 @@ class UILIB_API CWindowWnd
 public:
     CWindowWnd();
 
-    HWND GetHWND() const;
-    operator HWND() const;
+	HWND GetHWND() const;
+	HWND GetSafeHwnd() const;
+	operator HWND() const;
 
     bool RegisterWindowClass();
     bool RegisterSuperclass();
