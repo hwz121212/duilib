@@ -133,6 +133,11 @@ LPCTSTR CDYVirtualKeyBoardFrameWnd::GetWindowClassName() const
 	return kszWindowClassName;
 }
 
+CDuiString CDYVirtualKeyBoardFrameWnd::GetSkinFile()
+{
+	return _T("skin.xml"); 
+}
+
 void  CDYVirtualKeyBoardFrameWnd::InitWindow()
 {
 	//TODO init button type ,is it ctrl button

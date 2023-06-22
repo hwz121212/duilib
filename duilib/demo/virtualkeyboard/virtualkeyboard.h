@@ -13,7 +13,7 @@ enum TimerID
 
 
 
-class CDYVirtualKeyBoardFrameWnd : public WindowImplBase
+class CDYVirtualKeyBoardFrameWnd : public DuiLib::WindowImplBase
 {
 
 public:
@@ -41,8 +41,9 @@ public:
 
 #endif
 
+
 	virtual LPCTSTR GetWindowClassName() const;
-	virtual CDuiString GetSkinFile() { return _T("skin.xml"); }
+	virtual CDuiString GetSkinFile();
 	virtual CDuiString GetSkinFolder() { return _T("Skin"); }
 	virtual void  InitWindow();
 	virtual LRESULT OnSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
@@ -52,7 +53,12 @@ public:
 
 
 	virtual LRESULT OnLButtonDown(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled);
-	virtual LRESULT OnLButtonUp(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled);
+
+#ifndef SUPPORT_TOUCH
+	virtual LRESULT OnLButtonUp(UINT uMsg/*uMsg*/, WPARAM wParam/*wParam*/, LPARAM lParam/*lParam*/, BOOL& bHandled);
+#else
+	virtual LRESULT OnPointerUp(UINT uMsg/*uMsg*/, WPARAM wParam /*wParam*/, LPARAM lParam /*lParam*/, BOOL& bHandled);
+#endif
 
 	virtual LRESULT HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam) override;
 public:

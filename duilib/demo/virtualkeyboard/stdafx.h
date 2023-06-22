@@ -41,8 +41,8 @@
 #endif
 
 
-#include "DuiLib/UIlib.h"
-#pragma comment(lib, "DuiLib.lib")
+
+#include "duilib\UIlib.h"
 using namespace DuiLib;
 
 
