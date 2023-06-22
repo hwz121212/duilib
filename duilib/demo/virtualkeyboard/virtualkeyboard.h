@@ -44,7 +44,7 @@ public:
 
 	virtual LPCTSTR GetWindowClassName() const;
 	virtual CDuiString GetSkinFile();
-	virtual CDuiString GetSkinFolder() { return _T("Skin"); }
+	virtual CDuiString GetSkinFolder() { return _T("virtualkeyboard_Skin"); }
 	virtual void  InitWindow();
 	virtual LRESULT OnSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	virtual void Notify(TNotifyUI& msg);

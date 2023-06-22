@@ -58,14 +58,14 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 		}
 	}
 
-	HINSTANCE	hInstDll = LoadLibrary(_T("HookMSG.dll"));
+	//HINSTANCE	hInstDll = LoadLibrary(_T("HookMSG.dll"));
 
-	{
-		if (!hInstDll)
-		{
-			::MessageBox(NULL, _T("加载Dll失败！"), _T("提示"), MB_OK);
-		}
-	}
+	//{
+	//	if (!hInstDll)
+	//	{
+	//		::MessageBox(NULL, _T("加载Dll失败！"), _T("提示"), MB_OK);
+	//	}
+	//}
 	//
 	SetPriorityClass(GetCurrentProcess(), HIGH_PRIORITY_CLASS);
 	SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_HIGHEST);
